@@ -3,6 +3,7 @@ package org.jboss.pnc.okra.rest.team;
 import io.quarkus.panache.common.Sort;
 import org.jboss.pnc.okra.entity.team.Team;
 
+import javax.transaction.Transactional;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -16,9 +17,12 @@ import java.util.List;
 public class TeamRest {
 
     @GET
+    @Transactional
     public List<Team> list() {
+        Team team = new Team();
+        team.name = "haha";
+        team.persist();
         return Team.listAll(Sort.ascending("name"));
     }
 
-    //@GET("{id}/quarters")
 }

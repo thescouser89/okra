@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/template.xhtml">
+
+    <ui:define name="body">
+    <p:dataTable var="team" value="#{teamController.list()}">
+    <p:column headerText="name">
+        <h:outputText value="#{team.name}" />
+    </p:column>
+
+    <p:column headerText="description">
+        <h:outputText value="#{team.description}" />
+    </p:column>
+    </p:dataTable>
+    </ui:define>
+</ui:composition>

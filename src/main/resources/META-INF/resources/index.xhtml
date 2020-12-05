@@ -1,0 +1,15 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head />
+    <h:body>
+        hello world
+        <p:sidebar widgetVar="sidebar1" baseZIndex="10000">
+    <h1 style="font-weight:normal">Left Sidebar</h1>
+    <p:commandButton value="Cancel" oncomplete="PF('sidebar1').hide()"/>
+</p:sidebar>
+    </h:body>
+</html>

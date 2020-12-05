@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/template.xhtml">
+
+    <ui:define name="body">
+        <h:form>
+    <div class="ui-fluid">
+        <div class="p-field p-grid">
+            <p:outputLabel for="firstname4" styleClass="p-col-12 p-md-2" value="Firstname" />
+            <div class="p-col-12 p-md-10">
+                <p:inputText id="firstname4" />
+            </div>
+        </div>
+        <div class="p-field p-grid">
+            <p:outputLabel for="lastname4" styleClass="p-col-12 p-md-2" value="Lastname" />
+            <div class="p-col-12 p-md-10">
+                <p:inputText id="lastname4" />
+            </div>
+        </div>
+    </div>
+                <div class="p-formgroup-inline">
+        <div class="p-field">
+            <p:outputLabel for="firstname5" styleClass="ui-sr-only" value="Firstname" />
+            <p:inputText id="firstname5" placeholder="Firstname" />
+        </div>
+        <div class="p-field">
+            <p:outputLabel for="lastname5" styleClass="ui-sr-only" value="Lastname" />
+            <p:inputText id="lastname5" placeholder="Lastname" />
+        </div>
+        <p:button value="Submit" />
+    </div>
+        </h:form>
+    </ui:define>
+</ui:composition>
